@@ -4,6 +4,7 @@ import RoomView from '@/views/RoomView.vue'
 import AboutView from '@/views/AboutView.vue'
 import PlantsView from '@/views/PlantsView.vue'
 import Dashboard from '@/views/Dashboard.vue'
+import Analysis from '@/views/Analysis.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/dashboard:id',
       name: 'dashboard',
       component: Dashboard
+    },
+    {
+      path: '/analysis',
+      name: 'analysis',
+      component: Analysis
     }
   ]
 })
