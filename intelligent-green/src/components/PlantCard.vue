@@ -1,32 +1,48 @@
 <template>
-    <div class="card mb-4">
-      <img :src="plant.imageUrl" class="card-img-top" :alt="plant.commonName">
-      <div class="card-body">
-        <h5 class="card-title">{{ plant.commonName }}</h5>
-        <p class="card-text"><em>{{ plant.scientificName }}</em></p>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><strong>CO2 Absorption (avg per month):</strong> {{ plant.co2Absorption.averagePerMonth }}</li>
-          <li class="list-group-item"><strong>VOC Absorption (avg per month):</strong> {{ plant.vocAbsorption.averagePerMonth }}</li>
-          <li class="list-group-item"><strong>Dust Capture (avg per month):</strong> {{ plant.dustCapture.averagePerMonth }}</li>
-          <li class="list-group-item"><strong>Leaf Type:</strong> {{ plant.leafType }}</li>
-          <li class="list-group-item"><strong>Leaf Colors:</strong> {{ plant.leafColors }}</li>
-          <li class="list-group-item"><strong>Lifespan:</strong> {{ plant.lifespan }}</li>
-          <li class="list-group-item"><strong>Sunlight:</strong> {{ plant.care.sunlight }}</li>
-          <li class="list-group-item"><strong>Water:</strong> {{ plant.care.water }}</li>
-        </ul>
+    <div>
+      <div class="plant-card card" @click="showDetails">
+        <div class="card-body">
+          <div class="d-flex align-items-center">
+            <img :src="plant.image" alt="Plant Image" class="plant-image" />
+            <div class="ms-3">
+              <h5 class="card-title">{{ plant.name }}</h5>
+              <p class="card-text">{{ plant.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-if="showDetailsModal" class="modal" @click="closeModal">
+        <div class="modal-content" @click.stop>
+          <span class="close" @click="closeModal">&times;</span>
+          <h4>{{ plant.name }} Details</h4>
+          <p><strong>Description:</strong> {{ plant.description }}</p>
+          <p><strong>Watering Needs:</strong> {{ plant.wateringNeeds || 'N/A' }}</p>
+          <p><strong>Sunlight Requirements:</strong> {{ plant.sunlightRequirements || 'N/A' }}</p>
+          <!-- Add other plant details here -->
+        </div>
       </div>
     </div>
   </template>
   
-  <script setup>
-  import { defineProps } from 'vue';
-  
-  const props = defineProps({
-    plant: {
-      type: Object,
-      required: true,
+  <script>
+  export default {
+    props: {
+      plant: Object
     },
-  });
+    data() {
+      return {
+        showDetailsModal: false
+      };
+    },
+    methods: {
+      showDetails() {
+        this.showDetailsModal = true;
+      },
+      closeModal() {
+        this.showDetailsModal = false;
+      }
+    }
+  }
   </script>
   
   <style scoped>
@@ -93,4 +109,3 @@
     color: #666;
   }
   </style>
-  

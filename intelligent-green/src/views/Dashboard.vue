@@ -21,8 +21,33 @@ export default {
         id: 1, 
         name: 'Reunion Room', 
         sensors: [
-          { id: 1, name: 'Temperature Sensor', active: false },
-          { id: 2, name: 'Humidity Sensor', active: true },
+          { 
+            id: 1, 
+            name: 'DHT22 Temperature Sensor', 
+            active: false, 
+            description: 'Measures the temperature of the room.',
+            location: 'Ceiling',
+            type: 'Temperature',
+            manufacturer: 'Adafruit'
+          },
+          { 
+            id: 2, 
+            name: 'HS1101LF Humidity Sensor', 
+            active: true, 
+            description: 'Monitors the humidity levels.',
+            location: 'Wall',
+            type: 'Humidity',
+            manufacturer: 'Honeywell'
+          },
+          { 
+            id: 3, 
+            name: 'CO2Meter RAD-0301', 
+            active: true, 
+            description: 'Detects the concentration of carbon dioxide.',
+            location: 'Corner',
+            type: 'CO2',
+            manufacturer: 'CO2Meter'
+          }
         ],
         plants: [] 
       },
@@ -30,8 +55,33 @@ export default {
         id: 2, 
         name: 'Computer Lab', 
         sensors: [
-          { id: 1, name: 'Temperature Sensor', active: false },
-          { id: 2, name: 'Humidity Sensor', active: true },
+          { 
+            id: 1, 
+            name: 'DHT22 Temperature Sensor', 
+            active: false, 
+            description: 'Measures the temperature of the room.',
+            location: 'Ceiling',
+            type: 'Temperature',
+            manufacturer: 'Adafruit'
+          },
+          { 
+            id: 2, 
+            name: 'HS1101LF Humidity Sensor', 
+            active: true, 
+            description: 'Monitors the humidity levels.',
+            location: 'Wall',
+            type: 'Humidity',
+            manufacturer: 'Honeywell'
+          },
+          { 
+            id: 3, 
+            name: 'CO2Meter RAD-0301', 
+            active: true, 
+            description: 'Detects the concentration of carbon dioxide.',
+            location: 'Corner',
+            type: 'CO2',
+            manufacturer: 'CO2Meter'
+          }
         ], 
         plants: [] 
       },
@@ -39,15 +89,49 @@ export default {
         id: 3, 
         name: 'Office A3', 
         sensors: [
-          { id: 1, name: 'Temperature Sensor', active: false },
-          { id: 2, name: 'Humidity Sensor', active: true },
+          { 
+            id: 1, 
+            name: 'DHT22 Temperature Sensor', 
+            active: false, 
+            description: 'Measures the temperature of the room.',
+            location: 'Ceiling',
+            type: 'Temperature',
+            manufacturer: 'Adafruit'
+          },
+          { 
+            id: 2, 
+            name: 'HS1101LF Humidity Sensor', 
+            active: true, 
+            description: 'Monitors the humidity levels.',
+            location: 'Wall',
+            type: 'Humidity',
+            manufacturer: 'Honeywell'
+          },
+          { 
+            id: 3, 
+            name: 'CO2Meter RAD-0301', 
+            active: true, 
+            description: 'Detects the concentration of carbon dioxide.',
+            location: 'Corner',
+            type: 'CO2',
+            manufacturer: 'CO2Meter'
+          }
         ], 
         plants: [
-          { id: 1, name: 'Fern', description: 'ciao' },
-          { id: 2, name: 'Bamboo', description: 'ciao' },
+          { 
+            id: 1, 
+            name: 'Fern', 
+            description: 'ciao' 
+          },
+          { 
+            id: 2, 
+            name: 'Bamboo', 
+            description: 'ciao' 
+          }
         ] 
       }
     ];
+
 
     onMounted(() => {
       const roomId = parseInt(route.params.id);
