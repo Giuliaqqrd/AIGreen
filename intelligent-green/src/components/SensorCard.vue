@@ -70,7 +70,7 @@ export default {
 
 .sensor-card.active {
   border-color: #007bff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .sensor-card:hover {

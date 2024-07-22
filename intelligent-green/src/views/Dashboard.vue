@@ -19,7 +19,14 @@ export default {
     const rooms = [
   { 
     id: 1, 
-    name: 'Reunion Room', 
+    name: 'Reunion Room',
+    maxCapacity: 35, 
+    numberOfWindows: 4,
+    areaInSquareMeters: 35,
+    buildingSide: 'North',
+    mainUsage: 'Meetings',
+    airConditioned: true,
+    soundProof: false,
     sensors: [
       { 
         id: 1, 
@@ -47,6 +54,15 @@ export default {
         location: 'Corner',
         type: 'CO2',
         manufacturer: 'CO2Meter'
+      },
+      { 
+        id: 4, 
+        name: 'PIR Motion Sensor', 
+        active: true, 
+        description: 'Detects the presence of people in the room.',
+        location: 'Ceiling',
+        type: 'Occupation',
+        manufacturer: 'Bosch'
       }
     ],
     plants: [
@@ -90,7 +106,14 @@ export default {
   },
   { 
     id: 2, 
-    name: 'Computer Lab', 
+    name: 'Computer Lab',
+    maxCapacity: 40, 
+    numberOfWindows: 2,
+    areaInSquareMeters: 50,
+    buildingSide: 'East',
+    mainUsage: 'Computer training and work',
+    airConditioned: true,
+    soundProof: true,
     sensors: [
       { 
         id: 1, 
@@ -119,6 +142,15 @@ export default {
         type: 'CO2',
         manufacturer: 'CO2Meter'
       },
+      { 
+        id: 4, 
+        name: 'PIR Motion Sensor', 
+        active: true, 
+        description: 'Detects the presence of people in the room.',
+        location: 'Ceiling',
+        type: 'Occupation',
+        manufacturer: 'Bosch'
+      }
     ],
     plants: [
       { 
@@ -173,7 +205,14 @@ export default {
   },
   { 
     id: 3, 
-    name: 'Office A3', 
+    name: 'Office A3',
+    maxCapacity: 50, 
+    numberOfWindows: 3,
+    areaInSquareMeters: 25,
+    buildingSide: 'South',
+    mainUsage: 'Work office',
+    airConditioned: false,
+    soundProof: true,
     sensors: [
       { 
         id: 1, 
@@ -201,6 +240,15 @@ export default {
         location: 'Corner',
         type: 'CO2',
         manufacturer: 'CO2Meter'
+      },
+      { 
+        id: 4, 
+        name: 'PIR Motion Sensor', 
+        active: true, 
+        description: 'Detects the presence of people in the room.',
+        location: 'Ceiling',
+        type: 'Occupation',
+        manufacturer: 'Bosch'
       }
     ],
     plants: [

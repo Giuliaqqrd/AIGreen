@@ -2,12 +2,29 @@
   <div class="room-dashboard">
     <h2>{{ room.name }}</h2>
 
+    <!-- Sezione Dettagli Stanza -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <h4>Room Details</h4>
+        <div class="row room-details-container">
+          <div class="col-md-3 mb-3" v-for="(detail, index) in roomDetails" :key="index">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{ detail.title }}</h5>
+                <p class="card-text">{{ detail.value }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Sezione Sensori -->
     <div class="row mb-4">
       <div class="col-md-12">
         <h4>Sensors</h4>
         <div class="row sensor-container">
-          <div class="col-md-4" v-for="sensor in room.sensors" :key="sensor.id">
+          <div class="col-md-4 mb-3" v-for="sensor in room.sensors" :key="sensor.id">
             <sensor-card :sensor="sensor" />
           </div>
         </div>
@@ -19,7 +36,7 @@
       <div class="col-md-12">
         <h4>Plants</h4>
         <div class="row plant-container">
-          <div class="col-md-4" v-for="plant in room.plants" :key="plant.id">
+          <div class="col-md-4 mb-3" v-for="plant in room.plants" :key="plant.scientificName">
             <plant-card :plant="plant" />
           </div>
         </div>
@@ -72,7 +89,16 @@ export default {
       previousCo2Data: [],
       vocData: [],
       previousVocData: [],
-      scatterData: []
+      scatterData: [],
+      roomDetails: [
+        { title: 'Main Usage', value: this.room.mainUsage },
+        { title: 'Area', value: `${this.room.areaInSquareMeters} m²` },
+        { title: 'Max Capacity', value: this.room.maxCapacity },
+        { title: 'Number of Windows', value: this.room.numberOfWindows },
+        { title: 'Building Side', value: this.room.buildingSide },
+        { title: 'Air Conditioned', value: this.room.airConditioned ? 'Yes' : 'No' },
+        { title: 'Sound Proof', value: this.room.soundProof ? 'Yes' : 'No' }
+      ]
     };
   },
   created() {
@@ -152,5 +178,15 @@ export default {
 
 .row {
   margin-bottom: 20px;
+}
+
+.room-details-container .card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.room-details-container .card-body {
+  padding: 15px;
 }
 </style>
