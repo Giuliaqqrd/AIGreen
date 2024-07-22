@@ -1,6 +1,7 @@
 <template>
   <div class="room-dashboard">
     <h2>{{ room.name }}</h2>
+    <p class="room-description">{{ room.description }}</p>
 
     <!-- Sezione Dettagli Stanza -->
     <div class="row mb-4">
@@ -37,7 +38,7 @@
         <h4>Plants</h4>
         <div class="row plant-container">
           <div class="col-md-4 mb-3" v-for="plant in room.plants" :key="plant.scientificName">
-            <plant-card :plant="plant" />
+            <plant-card :plant="plant" :waterNeed="getWaterNeed(plant.id)" />
           </div>
         </div>
       </div>
@@ -158,6 +159,11 @@ export default {
       }
 
       return data;
+    },
+    getWaterNeed(plantId) {
+      const sensor = this.room.sensors.find(sensor => sensor.type === 'Water Need');
+      // Simula la lettura del sensore per una pianta data (logica di esempio)
+      return this.room.plants.find(plant => plant.id === plantId).waterNeed;
     }
   }
 };

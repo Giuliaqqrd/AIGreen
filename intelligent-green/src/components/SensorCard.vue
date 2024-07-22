@@ -69,8 +69,24 @@ export default {
 }
 
 .sensor-card.active {
-  border-color: #007bff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-color: #00ff00; /* Green color */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Subtle green glow */
+  animation: smooth-blink 2s infinite; /* Smooth blinking animation */
+}
+
+@keyframes smooth-blink {
+  0% {
+    border-color: #00ff00; /* Green color */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Subtle green glow */
+  }
+  50% {
+    border-color: #e0e0e0; /* Light gray color */
+    box-shadow: 0 0 0 rgba(0, 255, 0, 0); /* No glow */
+  }
+  100% {
+    border-color: #00ff00; /* Green color */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Subtle green glow */
+  }
 }
 
 .sensor-card:hover {

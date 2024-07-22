@@ -20,6 +20,7 @@ export default {
   { 
     id: 1, 
     name: 'Reunion Room',
+    description: 'A spacious room ideal for meetings and conferences, equipped with advanced monitoring systems.', 
     maxCapacity: 35, 
     numberOfWindows: 4,
     areaInSquareMeters: 35,
@@ -63,6 +64,15 @@ export default {
         location: 'Ceiling',
         type: 'Occupation',
         manufacturer: 'Bosch'
+      },
+      { 
+        id: 5, 
+        name: 'Soil Moisture Sensor', 
+        active: true, 
+        description: 'Monitors the soil moisture level to determine the need for watering.',
+        location: 'Soil',
+        type: 'Soil Moisture',
+        manufacturer: 'PlantTech'
       }
     ],
     plants: [
@@ -76,7 +86,8 @@ export default {
         leafType: 'Broad',
         leafColors: 'Green',
         lifespan: '5-10 years',
-        care: { sunlight: 'Indirect sunlight', water: 'Water once a week' }
+        care: { sunlight: 'Indirect sunlight', water: 'Water once a week' },
+        waterNeed: 30
       },
       { 
         commonName: 'Dracaena',
@@ -88,7 +99,8 @@ export default {
         leafType: 'Narrow',
         leafColors: 'Green with yellow stripes',
         lifespan: '10-15 years',
-        care: { sunlight: 'Low to bright indirect light', water: 'Water every 2 weeks' }
+        care: { sunlight: 'Low to bright indirect light', water: 'Water every 2 weeks' },
+        waterNeed: 10
       },
       { 
         commonName: 'Syngonium',
@@ -100,13 +112,15 @@ export default {
         leafType: 'Broad',
         leafColors: 'Green and white',
         lifespan: '5-10 years',
-        care: { sunlight: 'Bright indirect light', water: 'Water once a week' }
+        care: { sunlight: 'Bright indirect light', water: 'Water once a week' },
+        waterNeed: 100
       }
     ]
   },
   { 
     id: 2, 
     name: 'Computer Lab',
+    description: 'A high-tech lab with numerous computers, equipped with sensors to monitor environmental conditions.', 
     maxCapacity: 40, 
     numberOfWindows: 2,
     areaInSquareMeters: 50,
@@ -150,6 +164,15 @@ export default {
         location: 'Ceiling',
         type: 'Occupation',
         manufacturer: 'Bosch'
+      },
+      { 
+        id: 5, 
+        name: 'Soil Moisture Sensor', 
+        active: true, 
+        description: 'Monitors the soil moisture level to determine the need for watering.',
+        location: 'Soil',
+        type: 'Soil Moisture',
+        manufacturer: 'PlantTech'
       }
     ],
     plants: [
@@ -163,7 +186,8 @@ export default {
         leafType: 'Narrow',
         leafColors: 'Green with yellow edges',
         lifespan: '5-25 years',
-        care: { sunlight: 'Low to bright indirect light', water: 'Water every 2-3 weeks' }
+        care: { sunlight: 'Low to bright indirect light', water: 'Water every 2-3 weeks' },
+        waterNeed: 75
       },
       { 
         commonName: 'Sansevieria',
@@ -175,7 +199,8 @@ export default {
         leafType: 'Narrow',
         leafColors: 'Green with yellow edges',
         lifespan: '5-25 years',
-        care: { sunlight: 'Low to bright indirect light', water: 'Water every 2-3 weeks' }
+        care: { sunlight: 'Low to bright indirect light', water: 'Water every 2-3 weeks' },
+        waterNeed: 5
       },
       { 
         commonName: 'Bamboo plant',
@@ -187,7 +212,8 @@ export default {
         leafType: 'Narrow',
         leafColors: 'Green',
         lifespan: '5-10 years',
-        care: { sunlight: 'Full sun to partial shade', water: 'Keep soil moist' }
+        care: { sunlight: 'Full sun to partial shade', water: 'Keep soil moist' },
+        waterNeed: 0
       },
       { 
         commonName: 'Aglonema',
@@ -199,13 +225,15 @@ export default {
         leafType: 'Broad',
         leafColors: 'Green with silver markings',
         lifespan: '5-15 years',
-        care: { sunlight: 'Low to bright indirect light', water: 'Water every 1-2 weeks' }
+        care: { sunlight: 'Low to bright indirect light', water: 'Water every 1-2 weeks' },
+        waterNeed: 45
       }
     ]
   },
   { 
     id: 3, 
     name: 'Office A3',
+    description: 'A comfortable office space with modern amenities and environmental monitoring.', 
     maxCapacity: 50, 
     numberOfWindows: 3,
     areaInSquareMeters: 25,
@@ -249,6 +277,15 @@ export default {
         location: 'Ceiling',
         type: 'Occupation',
         manufacturer: 'Bosch'
+      },
+      { 
+        id: 5, 
+        name: 'Soil Moisture Sensor', 
+        active: true, 
+        description: 'Monitors the soil moisture level to determine the need for watering.',
+        location: 'Soil',
+        type: 'Soil Moisture',
+        manufacturer: 'PlantTech'
       }
     ],
     plants: [
@@ -262,7 +299,8 @@ export default {
         leafType: 'Broad',
         leafColors: 'Green with silver markings',
         lifespan: '5-15 years',
-        care: { sunlight: 'Low to bright indirect light', water: 'Water every 1-2 weeks' }
+        care: { sunlight: 'Low to bright indirect light', water: 'Water every 1-2 weeks' },
+        waterNeed: 95
       },
       { 
         commonName: 'Money plant',
@@ -274,7 +312,8 @@ export default {
         leafType: 'Broad',
         leafColors: 'Green',
         lifespan: '5-10 years',
-        care: { sunlight: 'Indirect sunlight', water: 'Water once a week' }
+        care: { sunlight: 'Indirect sunlight', water: 'Water once a week' },
+        waterNeed: 50
       },
       { 
         commonName: 'Dracaena',
@@ -286,7 +325,8 @@ export default {
         leafType: 'Narrow',
         leafColors: 'Green with yellow stripes',
         lifespan: '10-15 years',
-        care: { sunlight: 'Low to bright indirect light', water: 'Water every 2 weeks' }
+        care: { sunlight: 'Low to bright indirect light', water: 'Water every 2 weeks' },
+        waterNeed: 65
       }
     ]
   }
