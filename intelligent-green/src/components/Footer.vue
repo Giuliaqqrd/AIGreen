@@ -91,6 +91,7 @@
 <style scoped>
 footer {
   border-top: 1px solid #dcdcdc; /* Colore grigio chiaro per la linea */
+  
 }
 
 /* Puoi anche aggiungere altri stili se necessario per il footer */

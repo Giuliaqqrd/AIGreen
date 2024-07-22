@@ -9,7 +9,7 @@
       <div class="contact-section">
       <h2 class="contact-title">Do you want us to monitor one of your rooms?</h2>
       <p class="contact-description">
-        Contact us at: <a href="mailto:giulia.coucourde@gmail.com" class="contact-email">giulia.coucourde@gmail.com</a>
+        Contact us at: <a href="mailto:AIGreen@gmail.com" class="contact-email">AIGreen@gmail.com</a>
       </p>
     </div>
     </div>
@@ -52,6 +52,7 @@
   border-radius: 8px;
   padding: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .contact-title {
