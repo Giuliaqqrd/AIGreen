@@ -23,7 +23,7 @@ export const plantsData = [
     {
       commonName: 'Dracaena',
       scientificName: 'Dracaena fragrans',
-      imageUrl: './images/dracaena.jpg',
+      imageUrl: '/src/components/images/dracaena.webp',
       co2Absorption: {
         averagePerMonth: '12 g',  // valore medio mensile
       },
@@ -44,7 +44,7 @@ export const plantsData = [
     {
       commonName: 'Snake plant',
       scientificName: 'Dracaena trifasciata',
-      imageUrl: 'path/to/snake_plant.jpg',
+      imageUrl: '/src/components/images/dracaenatrifasciata.jpg',
       co2Absorption: {
         averagePerMonth: '18 g',  // valore medio mensile
       },
@@ -65,7 +65,7 @@ export const plantsData = [
     {
       commonName: 'Sansevieria',
       scientificName: 'Sansevieria trifasciata',
-      imageUrl: 'path/to/sansevieria.jpg',
+      imageUrl: '/src/components/images/Sansevieriatrifasciata.jpg',
       co2Absorption: {
         averagePerMonth: '18 g',  // valore medio mensile
       },
@@ -86,7 +86,7 @@ export const plantsData = [
     {
       commonName: 'Syngonium',
       scientificName: 'Syngonium podophyllum',
-      imageUrl: 'path/to/syngonium.jpg',
+      imageUrl: '/src/components/images/sygoniumpoll.webp',
       co2Absorption: {
         averagePerMonth: '14 g',  // valore medio mensile
       },
@@ -107,7 +107,7 @@ export const plantsData = [
     {
       commonName: 'Bamboo plant',
       scientificName: 'Bambusa vulgaris',
-      imageUrl: 'path/to/bamboo_plant.jpg',
+      imageUrl: '/src/components/images/bamboo.webp',
       co2Absorption: {
         averagePerMonth: '20 g',  // valore medio mensile
       },
@@ -128,7 +128,7 @@ export const plantsData = [
     {
       commonName: 'Aglonema',
       scientificName: 'Aglaonema commutatum',
-      imageUrl: 'path/to/aglaonema.jpg',
+      imageUrl: '/src/components/images/aglaonema.jpg',
       co2Absorption: {
         averagePerMonth: '16 g',  // valore medio mensile
       },
