@@ -6,6 +6,12 @@
           <RoomCard :room="room" />
         </div>
       </div>
+      <div class="contact-section">
+      <h2 class="contact-title">Do you want us to monitor one of your rooms?</h2>
+      <p class="contact-description">
+        Contact us at: <a href="mailto:giulia.coucourde@gmail.com" class="contact-email">giulia.coucourde@gmail.com</a>
+      </p>
+    </div>
     </div>
   </template>
   
@@ -26,16 +32,49 @@
   </script>
   
   <style scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-  .container {
-    margin-top: 20px;
-  }
-  .brand-text {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.container {
+  margin-top: 20px;
+}
+
+.brand-text {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  color: #095c0d; /* Colore verde che richiama la natura */
+  color: #28a745; /* Colore verde che richiama la natura */
   margin-left: 0.5rem;
 }
-  </style>
-  
+
+/* Stili per la sezione di contatto */
+.contact-section {
+  background-color: #e0f2e8; /* Colore verde chiaro per uno stile ecologico */
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.contact-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #2c6e49; /* Colore verde scuro per contrasto */
+  margin-bottom: 10px;
+}
+
+.contact-description {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #079704;
+}
+
+.contact-email {
+  color: #355f01; /* Colore verde acqua per il link */
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+</style>
