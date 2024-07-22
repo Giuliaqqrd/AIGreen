@@ -1,18 +1,50 @@
 <template>
   <div class="room-dashboard">
     <h2>{{ room.name }}</h2>
-    <div class="row">
-      <div class="col-md-4">
+
+    <!-- Sezione Sensori -->
+    <div class="row mb-4">
+      <div class="col-md-12">
         <h4>Sensors</h4>
-        <sensor-card v-for="sensor in room.sensors" :key="sensor.id" :sensor="sensor" />
-        <h4>Plants</h4>
-        <plant-card v-for="plant in room.plants" :key="plant.id" :plant="plant" />
+        <div class="row sensor-container">
+          <div class="col-md-4" v-for="sensor in room.sensors" :key="sensor.id">
+            <sensor-card :sensor="sensor" />
+          </div>
+        </div>
       </div>
-      <div class="col-md-8">
+    </div>
+
+    <!-- Sezione Piante -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <h4>Plants</h4>
+        <div class="row plant-container">
+          <div class="col-md-4" v-for="plant in room.plants" :key="plant.id">
+            <plant-card :plant="plant" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sezione Grafici -->
+    <div class="row mb-4">
+      <div class="col-md-6">
         <chart :data="temperatureData" :previousData="previousTemperatureData" title="Temperature Over Time" />
+      </div>
+      <div class="col-md-6">
         <chart :data="humidityData" :previousData="previousHumidityData" title="Humidity Over Time" />
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-md-6">
         <chart :data="co2Data" :previousData="previousCo2Data" title="CO2 Concentration Over Time" />
+      </div>
+      <div class="col-md-6">
         <chart :data="vocData" :previousData="previousVocData" title="VOC Concentration Over Time" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
         <scatter-chart :data="scatterData" title="Temperature vs CO2 Concentration" />
       </div>
     </div>
@@ -21,7 +53,7 @@
 
 <script>
 import SensorCard from '../components/SensorCard.vue';
-import PlantCard from './PlantCardDesc.vue';
+import PlantCard from './PlantCard.vue';
 import Chart from '../components/Chart.vue';
 import ScatterChart from '../components/ScatterChart.vue';
 
@@ -108,5 +140,17 @@ export default {
 <style scoped>
 .room-dashboard {
   padding: 20px;
+}
+
+.sensor-container, .plant-container {
+  margin-bottom: 20px;
+}
+
+.sensor-container > .col-md-4, .plant-container > .col-md-4 {
+  margin-bottom: 10px;
+}
+
+.row {
+  margin-bottom: 20px;
 }
 </style>

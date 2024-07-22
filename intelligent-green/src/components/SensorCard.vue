@@ -6,7 +6,6 @@
           <i class="bi" :class="sensorIcon"></i>
           <h5 class="card-title ms-2">{{ sensor.name }}</h5>
         </div>
-        <p class="card-text">Status: {{ sensor.active ? 'Active' : 'Inactive' }}</p>
       </div>
     </div>
     <div v-if="showDetailsModal" class="modal" @click="closeModal">
@@ -16,7 +15,8 @@
         <p><strong>Status:</strong> {{ sensor.active ? 'Active' : 'Inactive' }}</p>
         <p><strong>Type:</strong> {{ sensor.type || 'N/A' }}</p>
         <p><strong>Location:</strong> {{ sensor.location || 'N/A' }}</p>
-        <!-- Add other sensor details here -->
+        <p><strong>Description:</strong> {{ sensor.description || 'N/A' }}</p>
+        <p><strong>Manufacturer:</strong> {{ sensor.manufacturer || 'N/A' }}</p>
       </div>
     </div>
   </div>
