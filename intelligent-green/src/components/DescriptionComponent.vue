@@ -18,21 +18,24 @@
   </template>
   
   <script setup>
+  import img4 from "@/components/images/img4.webp"
+  import img3 from "@/components/images/img3.webp"
+  import img6  from "@/components/images/img6.jpeg"
   const sections = [
     {
-      title: 'Analisi dei Dati sulle Piante',
-      text: 'La nostra web app offre strumenti avanzati per analizzare i dati sulle piante, aiutandoti a monitorare la crescita, la salute e altri parametri cruciali.',
-      image: 'https://via.placeholder.com/300x200'
+      title: 'Data Analysis',
+      text: 'Our web app provides advanced tools for analyzing the distinctive characteristics of each plant species, helping you monitor growth, health, and other crucial parameters. These characteristics are essential for identifying the role of each plant in its living environment, allowing for better understanding and management of plant interactions and ecosystems.',
+      image: img3
     },
     {
-      title: 'Monitoraggio in Tempo Reale',
-      text: 'Grazie alla nostra tecnologia di monitoraggio in tempo reale, puoi ricevere aggiornamenti costanti sulle condizioni delle tue piante ovunque tu sia.',
-      image: 'https://via.placeholder.com/300x200'
+      title: 'Real time monitoring',
+      text: 'Real-time monitoring allows us to collect data from environmental sensors and understand how each plant interacts within its context. This continuous data collection helps to gain insights into the plant’s behavior and response to varying environmental conditions.',
+      image: img4
     },
     {
-      title: 'Report Dettagliati',
-      text: 'Ottieni report dettagliati e personalizzati che ti forniscono una panoramica completa delle performance delle tue piante.',
-      image: 'https://via.placeholder.com/300x200'
+      title: 'Detailed Report',
+      text: 'Our system generates detailed and highly customized reports that offer a thorough and comprehensive overview of the performance across each room and all the factors analyzed. These reports include in-depth analysis of various metrics, trends, and patterns observed in the data, providing valuable insights into the environmental conditions and their impact on plant health and growth. This allows you to make informed decisions based on a complete picture of the performance and conditions of your plants.',
+      image: img6
     }
   ];
   </script>

@@ -7,24 +7,24 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="...">
+          <img src="@/components/images/img1.png"  class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Prima Slide</h5>
-            <p>Descrizione della prima slide.</p>
+            <h5>Eco-future</h5>
+            <p>Plants meet AI</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="...">
+          <img src="@/components/images/img2.webp"  class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Seconda Slide</h5>
-            <p>Descrizione della seconda slide.</p>
+            <h5>Plants As Sensor</h5>
+            <p>Make plants sensing</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="...">
+          <img src="@/components/images/img5.jpeg"  class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Terza Slide</h5>
-            <p>Descrizione della terza slide.</p>
+            <h5>Monitor and Predict</h5>
+            <p>Future integrating plants.</p>
           </div>
         </div>
       </div>
