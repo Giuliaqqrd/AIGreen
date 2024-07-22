@@ -17,7 +17,7 @@
               <router-link to="/room" class="nav-link" href="#">Rooms</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Plants</a>
+              <router-link to="/plants" class="nav-link" href="#">Plants</router-link>
             </li>
             <li class="nav-item">
               <router-link to="/about" class="nav-link" href="#">About</router-link>

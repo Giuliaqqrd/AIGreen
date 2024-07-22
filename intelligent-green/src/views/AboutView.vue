@@ -3,6 +3,7 @@
       <h1 class="about-title">About the Project</h1>
       <div class="about-content">
         <img src="@/components/images/me.jpg" alt="Creator Photo" class="creator-photo">
+        <h3>Giulia Coucourde</h3>
         <div class="about-description">
           <p>
             This project was born from a university initiative for the course "Digital Innovation for Living Environments". The main goal is to enhance the role of plants in living spaces by integrating artificial intelligence into this context.

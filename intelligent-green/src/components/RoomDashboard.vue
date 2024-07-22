@@ -3,9 +3,9 @@
     <h2>{{ room.name }}</h2>
     <div class="row">
       <div class="col-md-4">
-        <h4>Sensori</h4>
+        <h4>Sensors</h4>
         <sensor-card v-for="sensor in room.sensors" :key="sensor.id" :sensor="sensor" />
-        <h4>Piante</h4>
+        <h4>Plants</h4>
         <plant-card v-for="plant in room.plants" :key="plant.id" :plant="plant" />
       </div>
       <div class="col-md-8">
@@ -21,7 +21,7 @@
 
 <script>
 import SensorCard from '../components/SensorCard.vue';
-import PlantCard from '../components/PlantCard.vue';
+import PlantCard from './PlantCardDesc.vue';
 import Chart from '../components/Chart.vue';
 import ScatterChart from '../components/ScatterChart.vue';
 
