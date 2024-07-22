@@ -24,7 +24,7 @@ const props = defineProps({
 const router = useRouter()
 
 function goToDashboard() {
-  router.push({ name: 'RoomDashboard', params: { id: props.room.id } })
+  router.push({ name: 'dashboard', params: { id: props.room.id } })
 }
 </script>
 
